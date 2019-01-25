@@ -1,7 +1,7 @@
 from __future__ import unicode_literals
 import matplotlib.pyplot as plt
 
-## Simulation of simulation of a cooling cup of coffee
+## Simulation of a cooling cup of coffee
 ## by Newtons law of cooling asserts
 
 class System(object):
