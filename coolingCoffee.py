@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 
 class System(object):
 
-    ## system model for Newton law model
+    ##   system model for Newton law model
     def __init__(self, initT = None, volume = None, r = None, tEnv = None, tEnd = None, dT= None):
         self.initT = initT
         self.volume= volume
