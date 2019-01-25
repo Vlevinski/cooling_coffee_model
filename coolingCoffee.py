@@ -2,7 +2,7 @@ from __future__ import unicode_literals
 import matplotlib.pyplot as plt
 
 ## Simulation of simulation of a cooling cup of coffee
-##       by Newtons law of cooling asserts
+## by Newtons law of cooling asserts
 
 class System(object):
 
@@ -15,6 +15,7 @@ class System(object):
         self.tEnd =tEnd
         self.dT = dT
 
+    ## print Sustem params
     def getSystem(self):
         print ("#System params")
         print ("init : ", self.initT)
