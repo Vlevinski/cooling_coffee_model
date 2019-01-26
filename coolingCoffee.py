@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 
 class System(object):
 
-    ##   system model for Newton law model
+    ##   system model for Newton law of cooling asserts
     def __init__(self, initT = None, volume = None, r = None, tEnv = None, tEnd = None, dT= None):
         self.initT = initT
         self.volume= volume
@@ -15,9 +15,9 @@ class System(object):
         self.tEnd =tEnd
         self.dT = dT
 
-    ## print Sustem params
+    ## print System params
     def getSystem(self):
-        print ("#System params")
+        print ("#System state")
         print ("init : ", self.initT)
         print ("volume:", self.volume)
         print ("r :    ", self.r)
@@ -25,39 +25,30 @@ class System(object):
         print ("tEnd : ", self.tEnd)
         print ("dT   : ", self.dT)
 
-    ## The temperature value
+    ## Temperature value set-up
     def setTempSystem(self, t=None):
         self.initT = t
 
+    ## Round the value
     def getTempSystem(self):
 #        print ("init : ", self.initT)
         return round(self.initT,2)
 
-    ## calculations
+    ## Calculations
     def updateSystem(self):
         T = self.initT
         T += -self.r*(T -self.tEnv)*self.dT
-#        tR = round(T,2)
         return self.setTempSystem(t=T)
 
 def main():
 
-    # start the prpcess
-    initT = 0
-    coffee = System(initT=initT,
-                volume=300,
-                r=0.02,
-                tEnv=22,
-                tEnd=30,
-                dT=1)
-
-#    coffee.getSystem()
-    coffee.setTempSystem(t=90)
-    coffee.getTempSystem()
+    # start the process
+    initT = 90
+    coffee = System(initT=initT, volume=300,r=0.02, tEnv=22, tEnd=30, dT=1)
 
     ## follow the process
-    x = []; y = [];
-    for i in range(250):
+    x = [0]; y = [initT];
+    for i in range(1, 250):
         coffee.updateSystem()
         x.append(i)
         y.append(coffee.getTempSystem())
