@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 
 ## Simulation of a cooling cup of coffee
 ## by Newtons law of cooling asserts
-
+###
 class System(object):
 
     ##   system model for Newton law of cooling asserts
