@@ -1,9 +1,10 @@
 from __future__ import unicode_literals
 import matplotlib.pyplot as plt
 
+####################
 ## Simulation of a cooling cup of coffee
 ## by Newtons law of cooling asserts
-###
+#####################
 class System(object):
 
     ##   system model for Newton law of cooling asserts
@@ -43,7 +44,7 @@ class System(object):
 def main():
 
     # start the process
-    initT = 90
+    initT = 70
     coffee = System(initT=initT, volume=300,r=0.02, tEnv=22, tEnd=30, dT=1)
 
     ## follow the process
