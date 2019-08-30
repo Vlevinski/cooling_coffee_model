@@ -11,8 +11,8 @@ Python development cases :
 
 2. Pandas/Python Data Analysis of UN site of population data:
            reference: csv refference: https://population.un.org/wpp/Download/Standard/CSV/
-   Following oparations:
+   Following operations:
       * Pandas DataFrame by reading csv file
-      * select DataFrame proile
+      * select DataFrame profile
       * Show DataFrame selected data with Matplotlib graph
       * save plot image to *.png file
