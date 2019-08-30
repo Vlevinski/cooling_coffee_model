@@ -1,6 +1,6 @@
 Python development cases :
 
-1. The coffee cooling problem
+1. The coffee cooling task
 
 The coffee cooling problem was discussed by Jearl Walker
 in Scientific Amerian in 1977. Is become a standard example of modeling and
