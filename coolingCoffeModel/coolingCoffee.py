@@ -1,5 +1,7 @@
 from __future__ import unicode_literals
 import matplotlib.pyplot as plt
+import csv
+
 
 ## Simulation of a cooling cup of coffee
 ## by Newtons law of cooling asserts
@@ -54,8 +56,23 @@ def main():
         y.append(coffee.getTempSystem())
 
     #make it visual
-    plt.plot(x,y)
+    plt.plot(x,y,'-r',label='Total', linewidth=2.5)
+    plt.title("Cooling cofe model")
+    plt.xlabel("Time, min.")
+    plt.ylabel("Temperature, Celcius deg..")
+    plt.legend(loc='best')
+    plt.grid(b=True, linewidth=0.5)
     plt.show()
+
+    data = [['Time', 'Temperture']]
+    for row in range(len(x)):
+        data.append([x[row],y[row]])
+
+    with open('/home/val/PycharmProjects/coolingCoffee/coolingCoffeModel/cooling_coffee_model.csv', 'w') as f:
+        writer = csv.writer(f)
+        for row in data:
+            writer.writerow(row)
+        f.close()
 
 main()
 
