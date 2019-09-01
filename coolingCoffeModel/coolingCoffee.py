@@ -57,12 +57,14 @@ def main():
 
     #make it visual
     plt.plot(x,y,'-r',label='Total', linewidth=2.5)
-    plt.title("Cooling cofe model")
+    plt.title("Coolling coffee model")
     plt.xlabel("Time, min.")
     plt.ylabel("Temperature, Celcius deg..")
     plt.legend(loc='best')
     plt.grid(b=True, linewidth=0.5)
-    plt.show()
+#    plt.show()
+    plt.savefig("/home/val/PycharmProjects/coolingCoffee/coolingCoffeModel/coolingCoffee.png")
+
 
     data = [['Time', 'Temperture']]
     for row in range(len(x)):
