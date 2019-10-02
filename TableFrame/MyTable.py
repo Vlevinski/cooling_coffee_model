@@ -11,9 +11,9 @@ class MyTable():
         '''
         Create pandas Data Frame class
         '''
-        self.filename= ""
+        self.filename = ""
 
-    def read(self, name = None):
+    def read(self, name=None):
         '''
         get DataFrame from csv file
         '''
@@ -21,7 +21,7 @@ class MyTable():
         self.filename = name
         return df
 
-    def fields(self,df):
+    def fields(self, df):
         '''
         get fields names
         '''
@@ -39,6 +39,9 @@ class MyTable():
 mt = MyTable()
 print (help(MyTable))
 
-df = mt.read(name = filename)
+df = mt.read(name=filename)
 fields = mt.fields(df)
 rows, columns = mt.info(df)
+
+print ( "Table example :")
+print (df.to_string())
