@@ -35,13 +35,26 @@ class MyTable():
         print ("Fields number: ", len(fields))
         return df.shape
 
+    def out(self, df,dfNames):
+        '''
+        print selected columns
+        :param df:  Data Frame
+        :param dfNames: selected names
+        '''
+        print (df[dfNames].to_string())
+        return True
 
 mt = MyTable()
-print (help(MyTable))
+#print (help(MyTable))
 
-df = mt.read(name=filename)
+df = mt.read(name = filename)
 fields = mt.fields(df)
 rows, columns = mt.info(df)
 
-print ( "Table example :")
-print (df.to_string())
+print ( "Selected names example: ")
+dfNames = ["#Shares","CurrCost","AUDCost"]
+mt.out(df,dfNames)
+print ("All names example: ")
+mt.out(df,fields)
+
+
