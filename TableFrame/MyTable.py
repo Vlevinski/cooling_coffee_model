@@ -44,17 +44,62 @@ class MyTable():
         print (df[dfNames].to_string())
         return True
 
+    def colFunction(self, df, col, f):
+        '''
+        :param df: DataFrame
+        :param col:  column name, string
+        :param f:    operation, function
+        :return:
+        '''
+        return df[col].apply(f)
+
+    def multiplyColumns(self, df, col1, col2, col3):
+        df[col3] = round(df[col1]* df[col2],2)
+        return df
+
+    def colSum(self,df,col):
+        '''
+        :param df:
+        :param col1:
+        :param col2:
+        :param col3:
+        :return:
+        '''
+        return df[col].sum()
+
+    def colMax(self,df,*args):
+        '''
+        :param df:
+        :param col1:
+        :param col2:
+        :param col3:
+        :return:
+        '''
+        return df[[*args]].max()
+
+    def colMin(self,df,col):
+        return df[col].min()
+
+    def addRowLast(self,df):
+        df.loc[len(df)] = None
+        return (df)
+
+    def deleteRowLast(self,df,):
+        df.drop(df.tail(1).index,inplace=True)   # or last n rows
+
+
+#declare
 mt = MyTable()
 #print (help(MyTable))
 
+#load
 df = mt.read(name = filename)
+print (mt.filename)
 fields = mt.fields(df)
-rows, columns = mt.info(df)
+rows, columns = mt.info(df)  #rows, columns = mt.info(df)
 
-print ( "Selected names example: ")
+#report
 dfNames = ["#Shares","CurrCost","AUDCost"]
-mt.out(df,dfNames)
-print ("All names example: ")
+#mt.out(df,dfNames)
 mt.out(df,fields)
-
 
