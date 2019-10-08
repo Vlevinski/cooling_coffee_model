@@ -1,8 +1,10 @@
+#!/usr/bin/python3.7
+#
 import pandas as pd
 import matplotlib.pyplot as plt
 
 ## create Data Drame by reading *.csv file see the link: https://population.un.org/wpp/Download/Standard/CSV/
-data = pd.read_csv("/home/val/PycharmProjects/coolingCoffee/UNpopulation/data/WPP2019_TotalPopulationBySex.csv", encoding = "ISO-8859-1")
+data = pd.read_csv("data/WPP2019_TotalPopulationBySex.csv", encoding = "ISO-8859-1")
 
 ## filter Data Frame for selected "Location' and "Medium" forecat. Print and clear the Data Frame columns
 mld = data[(data['Location']=='Republic of Moldova') & (data['VarID']==2)]
