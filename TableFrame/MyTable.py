@@ -102,4 +102,6 @@ rows, columns = mt.info(df)  #rows, columns = mt.info(df)
 dfNames = ["#Shares","CurrCost","AUDCost"]
 #mt.out(df,dfNames)
 mt.out(df,fields)
-
+names = ["CurrPrice",  "AUDPrice","BrokerCoAUD","FullCoAUD","#Shares","CurrCost","AUDCost"]
+total = dict(round(mt.colSum(df,names),2))
+print ("total: ", total)
