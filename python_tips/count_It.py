@@ -3,6 +3,6 @@ data =["python", "java", "C" ,"python", "Ruby", "java","python", "swift", "C++"]
 
 def countIt(data):
     import collections as coll
-    return coll.Counter(data)
+    return dict(coll.Counter(data))
 
-print (dict(countIt(data)))
+print (countIt(data))
