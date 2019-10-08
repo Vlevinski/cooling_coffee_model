@@ -5,4 +5,4 @@ def countIt(data):
     import collections as coll
     return coll.Counter(data)
 
-print (countIt(data))
+print (dict(countIt(data)))
