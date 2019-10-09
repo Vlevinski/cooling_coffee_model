@@ -42,7 +42,7 @@ data =  df.create()
 df.out(data)
 df.out(data.iloc[0,0])
 
-#round data to 2 decimals
+#round data to 2 decimals and print it out
 df.round(data)
 df.out(data)
 df.out(data.iloc[0,0])
