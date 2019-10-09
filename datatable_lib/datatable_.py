@@ -2,6 +2,7 @@ import datatable as dt
 import numpy as np
 
 class DT():
+
     def __init__(self):
         self.name = ''
 
@@ -13,5 +14,7 @@ class DT():
         print (data)
 
 dtn = DT()
+
+#generate data
 data =  (dtn.create(size=10))
 dtn.out(data)
