@@ -13,12 +13,26 @@ class DT():
         np.random.seed(1)
         return dt.Frame(np.random.randn(size))
 
+    def createColumn(self, name = "A",size=1000):
+        import pandas as pd
+        return dt.Frame(pd.DataFrame({name: range(size)}))
+
+    def createJson(self, foo):
+        return dt.Frame(foo)
+
     def out(self, data):
         print (data)
 
 dtn = DT()
 
 #generate data
-data =  dtn.create(size=10)
+data =  dtn.create()
 dtn.out(data)
 
+#generate from pandas frame
+df = dtn.createColumn()
+dtn.out(df)
+
+#generate fron json
+df = dtn.createJson({"n":[1,2,3],"s":["foo","bar","why"]})
+dtn.out(df)
