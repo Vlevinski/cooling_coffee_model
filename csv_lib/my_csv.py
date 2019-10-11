@@ -49,7 +49,7 @@ class MyCsv():
         lst =  Counter(t[column] for t in data)
         return lst.most_common(num)
 
-# inheritance of class
+# class inheritance
 mc = MyCsv()
 data = mc.load(fname)
 
@@ -61,14 +61,14 @@ print (mc.last5(data))
 mc.item(data, 5)
 mc.itemline(data, 5)
 
-#select rows
+# select rows
 cm = mc.select(data,'first_name', 'Lydie')
 print (len(cm))
 
-#replace column value
+# replace column value
 cmi = mc.replace(cm,'email', '','NULL')
 print (cmi)
 
 # count columns of csv file
 lst = mc.counter(data,'first_name')
-print (dict(lst.most_common(3)) )
+print (dict(lst.most_common(3)))
