@@ -3,11 +3,19 @@ import csv
 fname = "example.csv"
 
 class MyCsv():
+    '''
+    csv class for data analysis
+    '''
 
     def __init__(self):
         self.filename = ''
 
     def load(self, name):
+        '''
+        read csv file
+        :param name:  csv file name
+        :return:   list of Dict reader rows
+        '''
         self.filename = name
         return list(csv.DictReader(open(name)))
 
@@ -41,21 +49,26 @@ class MyCsv():
         lst =  Counter(t[column] for t in data)
         return lst.most_common(num)
 
-
+# inheritance of class
 mc = MyCsv()
 data = mc.load(fname)
 
+# get head and tail 5 rows
 print (mc.first5(data))
 print (mc.last5(data))
 
+# print items of the idx row of data
 mc.item(data, 5)
 mc.itemline(data, 5)
 
+#select rows
 cm = mc.select(data,'first_name', 'Lydie')
 print (len(cm))
 
+#replace column value
 cmi = mc.replace(cm,'email', '','NULL')
 print (cmi)
 
+# count columns of csv file
 lst = mc.counter(data,'first_name')
 print (dict(lst.most_common(3)) )
