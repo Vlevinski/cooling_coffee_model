@@ -40,6 +40,9 @@ class MyCsv():
     def replace(self, data, column, value, newvalue):
         return   [{**c, column:c[column].replace(value, newvalue)} for c in data if c[column] == value]
 
+    def empty(self, data, column, value):
+        return [c[column] for c in data if c[column] == value]
+
     def counter(self, data, column):
         from collections import Counter
         return Counter(t[column] for t in data)
@@ -58,17 +61,20 @@ print (mc.first5(data))
 print (mc.last5(data))
 
 # print items of the idx row of data
-mc.item(data, 5)
-mc.itemline(data, 5)
+mc.item(data, 4)
+mc.itemline(data, 4)
 
 # select rows
 cm = mc.select(data,'first_name', 'Lydie')
 print (len(cm))
+print (cm)
 
 # replace column value
-cmi = mc.replace(cm,'email', '','NULL')
+cmi = mc.replace(cm,'email', '','Empty')
 print (cmi)
 
 # count columns of csv file
 lst = mc.counter(data,'first_name')
 print (dict(lst.most_common(3)))
+
+#print (mc.empty(data, 'email', ''))
