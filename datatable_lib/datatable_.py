@@ -1,6 +1,6 @@
 import datatable as dt
 import numpy as np
-import pandas as pd
+#import pandas as pd
 
 class DT():
     '''
@@ -16,9 +16,6 @@ class DT():
     def from_csv(self, file = "in.csv"):
         return dt.fread(file)
 
-    def to_csv(self, file = 'out.csv'):
-        return pd.to_csv()
-
     def names(self, table):
         return table.names
 
@@ -28,11 +25,6 @@ tb = DT()
 t = tb.from_csv(file ='datatable_lib/in.csv') # or t = tb.create
 out(t)
 out(type(t))
-t.to_csv('datatable_lib/out.csv')
-
-#tpd = t.to_pandas()
-#out(type(tpd))
-
 
 ## statistics
 #out(t.names)
