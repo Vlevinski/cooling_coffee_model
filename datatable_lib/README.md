@@ -1,2 +1,2 @@
 #
-#   MyDT class as functionality and commands that you can run in datatable
+#   MyDT class is for datatable operations
