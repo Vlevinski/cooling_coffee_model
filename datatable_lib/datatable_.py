@@ -9,30 +9,27 @@ class DT():
     def __init__(self):
         self.name = ''
 
-    def create(self, size=1000000):
-        np.random.seed(1)
+    def create(self, size=10):
         return dt.Frame(np.random.randn(size))
 
-    def createColumn(self, name = "A",size=1000):
-        import pandas as pd
-        return dt.Frame(pd.DataFrame({name: range(size)}))
+    def from_csv(self, file = "in.csv"):
+        return dt.fread(file)
 
-    def createJson(self, foo):
-        return dt.Frame(foo)
+    def names(self, table):
+        return table.names
 
-    def out(self, data):
-        print (data)
+out = lambda x: print(x)
 
-dtn = DT()
+tb = DT()
+table = tb.from_csv()
 
-#generate data
-data =  dtn.create()
-dtn.out(data)
+out(table)
+out(table.sum())
+#out(data.names)
+#out(data.shape)
+#out(data.head(1))
+#data.sum()      data.nunique()
+#data.sd()       data.max()
+#data_df.mode()  data_df.min()
+#data.nmodal()   data_df.mean()
 
-#generate from pandas frame
-df = dtn.createColumn()
-dtn.out(df)
-
-#generate fron json
-df = dtn.createJson({"n":[1,2,3],"s":["foo","bar","why"]})
-dtn.out(df)
