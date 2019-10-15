@@ -2,14 +2,25 @@ from __future__ import unicode_literals
 import matplotlib.pyplot as plt
 import csv
 
-
+'''
 ## Simulation of a cooling cup of coffee
 ## by Newtons law of cooling asserts
+                                @vlevinski
+'''
 
-class System(object):
+class System():
 
-    ##   system model for Newton law of cooling asserts
+
     def __init__(self, initT = None, volume = None, r = None, tEnv = None, tEnd = None, dT= None):
+        '''
+        ##   system model for Newton law of cooling asserts
+        :param initT:
+        :param volume:
+        :param r:
+        :param tEnv:
+        :param tEnd:
+        :param dT:
+        '''
         self.initT = initT
         self.volume= volume
         self.r = r
@@ -17,8 +28,12 @@ class System(object):
         self.tEnd =tEnd
         self.dT = dT
 
-    ## print System params
+
     def getSystem(self):
+        '''
+        ## print System params
+        :return:
+        '''
         print ("#System state")
         print ("init : ", self.initT)
         print ("volume:", self.volume)
@@ -27,20 +42,32 @@ class System(object):
         print ("tEnd : ", self.tEnd)
         print ("dT   : ", self.dT)
 
-    ## Temperature value set-up
-    def setTempSystem(self, t=None):
+
+    def setInit(self, t=None):
+        '''
+        ## Temperature value set-up
+        :param t:
+        :return:
+        '''
         self.initT = t
 
-    ## Round the value
-    def getTempSystem(self):
-#        print ("init : ", self.initT)
+
+    def roundInit(self):
+        '''
+        ## Round the value
+        :return:
+        '''
         return round(self.initT,2)
 
-    ## Calculations
-    def updateSystem(self):
+
+    def updateState(self):
+        '''
+        ## Calculations
+        :return:
+        '''
         T = self.initT
         T += -self.r*(T -self.tEnv)*self.dT
-        return self.setTempSystem(t=T)
+        return self.setInit(t=T)
 
 def main():
 
@@ -51,9 +78,9 @@ def main():
     ## follow the process
     x = [0]; y = [initT];
     for i in range(1, 250):
-        coffee.updateSystem()
+        coffee.updateState()
         x.append(i)
-        y.append(coffee.getTempSystem())
+        y.append(coffee.roundInit())
 
     #make it visual
     plt.plot(x,y,'-r',label='Total', linewidth=2.5)
@@ -62,15 +89,15 @@ def main():
     plt.ylabel("Temperature, Celcius deg..")
     plt.legend(loc='best')
     plt.grid(b=True, linewidth=0.5)
-#    plt.show()
-    plt.savefig("/home/val/PycharmProjects/coolingCoffee/coolingCoffeModel/coolingCoffee.png")
+    plt.show()
+#    plt.savefig("coolingCoffeModel/coolingCoffee.png")
 
 
     data = [['Time', 'Temperture']]
     for row in range(len(x)):
         data.append([x[row],y[row]])
 
-    with open('/home/val/PycharmProjects/coolingCoffee/coolingCoffeModel/cooling_coffee_model.csv', 'w') as f:
+    with open('coolingCoffeModel/cooling_coffee_model.csv', 'w') as f:
         writer = csv.writer(f)
         for row in data:
             writer.writerow(row)
