@@ -1,12 +1,11 @@
-#!/usr/bin/python3.8
+#!/usr/bin/env python3.7
 #               @vlevinski
 #
 
-#from googlesearch import search
 try:
     from googlesearch import search
 except ImportError:
     print ( " no module named 'google' found")
 
-for url in search('"Breaking Code" WordPress blog', stop=5):
+for url in search('Python learn', stop=5):
     print(url)
