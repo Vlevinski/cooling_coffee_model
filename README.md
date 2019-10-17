@@ -42,3 +42,5 @@ Python development cases :
  |  
  |  __weakref__
  |      list of weak references to the object (if defined)
+
+4, CReate Pythob script googlesearch
