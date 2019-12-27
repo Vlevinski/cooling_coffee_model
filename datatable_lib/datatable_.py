@@ -7,13 +7,15 @@
  https://datatable.readthedocs.io/en/latest/using-datatable.html
  https://www.kaggle.com/sudalairajkumar/getting-started-with-python-datatable
  https://github.com/Rdatatable/data.table/wiki
+ https://towardsdatascience.com/an-overview-of-pythons-datatable-package-5d3a97394ee9
+                                @vlevinski
 '''
 
 import datatable as dt
 import numpy as np
 #import pandas as pd
 
-class DT():
+class MyDT():
     '''
     DT class as functionality for datatable library
 # ===========================
@@ -91,7 +93,7 @@ class DT():
         '''
         return table.names
 
-tb = DT()
+tb = MyDT()
 
 #read csv filie
 t = tb.in_csv(file ='datatable_lib/in.csv') # or t = tb.create

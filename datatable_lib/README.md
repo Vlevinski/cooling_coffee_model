@@ -1,6 +1,6 @@
 #
 #   MyDT class is for datatable operations
-# 
+#                       *@vlevinski*
 Demo:    
     a  b      d
 --  --  ---  ---

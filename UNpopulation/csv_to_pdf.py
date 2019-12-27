@@ -1,5 +1,6 @@
 #!/usr/bin/python3.7
 #
+
 import pandas as pd
 import matplotlib.pyplot as plt
 
@@ -14,6 +15,7 @@ del mld['LocID']; del mld['VarID']; del mld['MidPeriod']
 
 ## plot graphic of selcted data with matplotlib library
 mld.plot()                        # simple plot
+
 #plt.savefig("MDpopulation.png")  # save plot data in the case you need, uncomment intruction
 plt.show()
 

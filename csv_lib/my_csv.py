@@ -8,7 +8,7 @@ class MyCsv():
     '''
 
     def __init__(self):
-        self.filename = ''
+        self.filename = "example.csv"
 
     def load(self, name):
         '''
