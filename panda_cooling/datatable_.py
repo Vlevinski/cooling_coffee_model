@@ -96,10 +96,10 @@ class MyDT():
 tb = MyDT()
 
 #read csv filie
-t = tb.in_csv(file ='datatable_lib/in.csv') # or t = tb.create
+t = tb.in_csv(file ='panda_cooling/in.csv') # or t = tb.create
 print("DataTable shape", t.shape)
 
 #write csv
-tb.out_csv(t,'datatable_lib/out.csv')
+tb.out_csv(t,'panda_cooling/out.csv')
 
 
