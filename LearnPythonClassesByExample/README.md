@@ -25,6 +25,7 @@ Learn Python classes by Example:
             • age
             • email
             • programmingCourse
+
 It should also have a function called DisplayName(). The DisplayName function
 should print the students full name i.e. First Name (Peter) Last name (Pan) should
 print out: Peter Pan.
