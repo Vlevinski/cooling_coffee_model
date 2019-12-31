@@ -40,4 +40,4 @@ The StudentRecordClass class should be saved in its own .py file.
       
      get the result:
      
-         Nick Pann       
+          Nick Pann       
