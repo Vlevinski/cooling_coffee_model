@@ -1,4 +1,4 @@
-Learn Python classes by Example:
+#Learn Python classes by Example:
 
      Read 3 first parahraps from repro.pdf
     
@@ -30,7 +30,7 @@ It should also have a function called DisplayName(). The DisplayName function
 should print the students full name i.e. First Name (Peter) Last name (Pan) should
 print out: Peter Pan.
 
-The StudentRecordClass class should be saved in its own .py file.
+#The StudentRecordClass class should be saved in its own .py file.
 
 
      create: Python class from StudentClass.py 
@@ -41,4 +41,4 @@ The StudentRecordClass class should be saved in its own .py file.
       
      get the result:
      
-          Nick Pann       
+          Nick Pann

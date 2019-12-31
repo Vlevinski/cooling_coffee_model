@@ -1,6 +1,6 @@
 # copy the list from pdf like
 #          fodselsNummer,firstName,lastName,age,email,programmingCourse
-#    create record file Student Records.txt
+#       create record file Student Records.txt
 
 class Student():
     def __int__(self,sN,fN,lN,age,email,pCourse):
