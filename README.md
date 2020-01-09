@@ -46,11 +46,11 @@ Python development cases :
  |  __weakref__
  |      list of weak references to the object (if defined)
 
-4. UNpopulation - Python for Data Atalisis
+4. UN_population - Python for Data Atalysis
 
 ![MDpopulation.png](UNpopulation/MDpopulation.png)
 
-5. CReate Pythob script googlesearch
+5. Create Pythob script googlesearch
 
     Run the script by using its filename
             $ ./g_search.py 
