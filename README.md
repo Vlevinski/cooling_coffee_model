@@ -22,33 +22,9 @@
 
 3. TableFrame : Table data frame
     
-    class MyTable(builtins.object)
- |  Methods defined here:
- |  
- |  __init__(self)
- |      Create pandas Data Frame class
- |  
- |  fields(self, df)
- |      get fields names
- |  
- |  info(self, df)
- |      gen Table info
- |  
- |  read(self, name=None)
- |      get DataFrame from csv file
- |  
- |  ----------------------------------------------------------------------
- |  Data descriptors defined here:
- |  
- |  __dict__
- |      dictionary for instance variables (if defined)
- |  
- |  __weakref__
- |      list of weak references to the object (if defined)
-
 4. UN_population - Python for Data Atalysis
 
-![MDpopulation.png](UNpopulation/MDpopulation.png)
+![MDpopulation.png](population_model_UN/MDpopulation.png)
 
 5. Create Pythob script googlesearch
 
