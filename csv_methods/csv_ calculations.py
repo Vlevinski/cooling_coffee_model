@@ -1,8 +1,10 @@
 #!python3.7
+#       Demo example 1
 
 
-from collections import Counter
 from csv_methods.data import CustomCsv
+from collections import Counter
+
 
 #  Read file
 cs = CustomCsv()
