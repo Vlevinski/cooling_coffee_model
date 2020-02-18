@@ -9,7 +9,7 @@
         More: https://github.com/AllenDowney/ModSimPy
               http://greenteapress.com/ModSimPy/ModSimPy.pdf
 
-![coolingCoffee.png](coolingCoffeModel/coolingCoffee.png)
+![coolingCoffee.png](cooling_cup_of_coffee/coolingCoffee.png)
 
 
 2. Pandas/Python Data Analysis of UN site of population data:
