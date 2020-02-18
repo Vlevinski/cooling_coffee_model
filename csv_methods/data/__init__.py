@@ -1,5 +1,5 @@
 class CustomCsv():
-    #csv class for data analysis
+    ''' Customize csv files analysis'''
 
     def __init__(self):
         self.filename = "example.csv"
