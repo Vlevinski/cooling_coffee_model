@@ -6,8 +6,9 @@ from csv_methods.data import CustomCsv
 from collections import Counter
 
 
-#  Read file
+# print( help(CustomCsv)) #Read file
 cs = CustomCsv()
+
 data = cs.load("data/income.csv")
 
 # Count values
