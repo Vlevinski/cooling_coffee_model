@@ -9,11 +9,13 @@ class Temperature:
         # self.celsius = self._Celsius()
         # self.kelvin = self._Kelvin()
         # self.fahrenheit = self.to_Fahrenheit()
-
-        if value[-1].upper() in ['C', 'F', 'K']:
-            self.value = value.upper()
-        else:
-            raise ValueError('Temperature must be C|F|K')
+        try:
+            if value[-1].upper() in ['C', 'F', 'K']:
+                self.value = value.upper()
+            else:
+                raise ValueError('Temperature must be C|F|K')
+        except ValueError:
+            print ("Value error, Jim")
         if self.value[-1] is "C": self._Celsius()
         elif self.value[-1] is "F": self._Fahrenheit()
         elif self.value[-1] is "K": self._Kelvin()
@@ -31,8 +33,8 @@ class Temperature:
     def _Kelvin(self):
         # _Celsius = value - 273.15;
         # _Fahrenheit = (_Celsius * 9 / 5) + 32;
-        print("It's Kelivin, Jim T:", end=" ")
+        print("It's Kelvin, Jim T:", end=" ")
 
 
-t = Temperature("23F")
+t = Temperature("23C")
 print (t.value)
