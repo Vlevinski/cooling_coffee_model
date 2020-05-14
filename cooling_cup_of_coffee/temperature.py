@@ -6,9 +6,9 @@ class Temperature:
 
     def __init__(self, value):
         self.value = value
-        # self.celsius = self._celsius()
-        # self.kelvin = self._kelvin()
-        # self.fahrenheit = self._fahrenheit()
+        self.celsius = None
+        self.kelvin = None
+        self.fahrenheit = None
         try:
             if value[-1].upper() in ['C', 'F', 'K']:
                 self.value = value.upper()
@@ -24,48 +24,24 @@ class Temperature:
             self._kelvin()
 
     def _celsius(self):
-        # _Fahrenheit = (value * 9 / 5) + 32;
-        # _Kelvin = value + 273.15;
+        self.celsius = round((float(self.value[:-1])),2)
+        self.fahrenheit = round(((float(self.value[:-1])* 9 / 5) + 32),2)
+        self.kelvin = round((float(self.value[:-1]) + 273.15),2)
         print("It's Celsius, Jim. T:", end=" ")
 
     def _fahrenheit(self):
-        # _Celsius = (value - 32) * 5/9;
-        # _Kelvin = _Celsius + 273.15;
+        self.fahrenheit = round((float(self.value[:-1])),2)
+        self.celsius = round((((float(self.value[:-1]) - 32) * 5/9)),4)
+        self.kelvin = round((self.celsius + 273.15),3)
         print("It's Fahrenheit, Jim  T:", end=" ")
 
     def _kelvin(self):
-        # _Celsius = value - 273.15;
-        # _Fahrenheit = (_Celsius * 9 / 5) + 32;
+        self.kelvin = round((float(self.value[:-1])),2)
+        self.celsius = round((float(self.value[:-1]) - 273.15),2)
+        self.fahrenheit = round(((self.celsius * 9 / 5) + 32),2)
         print("It's Kelvin, Jim T:", end=" ")
 
-'''   
-    @property
-    def kelvin(self):
-        if self.unit == 'K':
-            return self.value
-        elif self.unit == 'C':
-            return self.value - 273.15
-        else:
-            return (self.value - 273.15) * 9 / 5 + 32
-
-    @property
-    def celsius(self):
-        if self.unit == 'C':
-            return self.value
-        elif self.unit == 'K':
-            return self.value + 273.15
-        else:
-            return (self.value * 9 / 5) + 32
-
-    @property
-    def fahrenheit(self):
-        if self.unit == 'F':
-            return self.value
-        elif self.unit == 'C':
-            return (self.value - 32) * 5 / 9
-        else:
-            return (self.value - 32) * 5 / 9 + 273.15    
-'''
-
-t = Temperature("23a")
+t = Temperature("0K")
 print(t.value)
+print(str(t.celsius)+"C", str(t.kelvin)+"K", str(t.fahrenheit)+"F")
+
