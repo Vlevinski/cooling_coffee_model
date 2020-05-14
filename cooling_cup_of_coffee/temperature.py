@@ -41,7 +41,7 @@ class Temperature:
         self.fahrenheit = round(((self.celsius * 9 / 5) + 32),2)
         print("It's Kelvin, Jim T:", end=" ")
 
-t = Temperature("0K")
+t = Temperature("0F")
 print(t.value)
 print(str(t.celsius)+"C", str(t.kelvin)+"K", str(t.fahrenheit)+"F")
 
