@@ -14,8 +14,8 @@ class Temperature:
                 self.value = value.upper()
             else:
                 raise ValueError('Temperature must be C|F|K')
-        except ValueError:
-            print("Value error, Jim")
+        except ValueError as e:
+            print("Value error, Jim.", e)
         if self.value[-1] is "C":
             self._celsius()
         elif self.value[-1] is "F":
@@ -39,5 +39,5 @@ class Temperature:
         print("It's Kelvin, Jim T:", end=" ")
 
 
-t = Temperature("23C")
+t = Temperature("23a")
 print(t.value)
