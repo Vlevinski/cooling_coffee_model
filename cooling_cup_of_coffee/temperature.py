@@ -2,13 +2,13 @@
 
 
 class Temperature:
-    """ Get temperature from value xC, or xK, or xF  in Celsius, Kelvin or Fahrenheit"""
+    """ Get temperature from xC, or xK, or xF value, where value is Celsius, Kelvin or Fahrenheit"""
 
     def __init__(self, value):
         self.value = value
-        # self.celsius = self._Celsius()
-        # self.kelvin = self._Kelvin()
-        # self.fahrenheit = self.to_Fahrenheit()
+        # self.celsius = self._celsius()
+        # self.kelvin = self._kelvin()
+        # self.fahrenheit = self._fahrenheit()
         try:
             if value[-1].upper() in ['C', 'F', 'K']:
                 self.value = value.upper()
@@ -16,21 +16,21 @@ class Temperature:
                 raise ValueError('Temperature must be C|F|K')
         except ValueError:
             print ("Value error, Jim")
-        if self.value[-1] is "C": self._Celsius()
-        elif self.value[-1] is "F": self._Fahrenheit()
-        elif self.value[-1] is "K": self._Kelvin()
+        if self.value[-1] is "C": self._celsius()
+        elif self.value[-1] is "F": self._fahrenheit()
+        elif self.value[-1] is "K": self._kelvin()
 
-    def _Celsius(self):
+    def _celsius(self):
         # _Fahrenheit = (value * 9 / 5) + 32;
         # _Kelvin = value + 273.15;
         print("Tt's Celsius, Jim. T:", end=" ")
 
-    def _Fahrenheit(self):
+    def _fahrenheit(self):
         # _Celsius = (value - 32) * 5/9;
         # _Kelvin = _Celsius + 273.15;
         print("It's Fahrenheit, Jim  T:", end=" ")
 
-    def _Kelvin(self):
+    def _kelvin(self):
         # _Celsius = value - 273.15;
         # _Fahrenheit = (_Celsius * 9 / 5) + 32;
         print("It's Kelvin, Jim T:", end=" ")
