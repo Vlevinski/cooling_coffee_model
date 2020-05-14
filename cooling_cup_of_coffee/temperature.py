@@ -38,6 +38,34 @@ class Temperature:
         # _Fahrenheit = (_Celsius * 9 / 5) + 32;
         print("It's Kelvin, Jim T:", end=" ")
 
+'''   
+    @property
+    def kelvin(self):
+        if self.unit == 'K':
+            return self.value
+        elif self.unit == 'C':
+            return self.value - 273.15
+        else:
+            return (self.value - 273.15) * 9 / 5 + 32
+
+    @property
+    def celsius(self):
+        if self.unit == 'C':
+            return self.value
+        elif self.unit == 'K':
+            return self.value + 273.15
+        else:
+            return (self.value * 9 / 5) + 32
+
+    @property
+    def fahrenheit(self):
+        if self.unit == 'F':
+            return self.value
+        elif self.unit == 'C':
+            return (self.value - 32) * 5 / 9
+        else:
+            return (self.value - 32) * 5 / 9 + 273.15    
+'''
 
 t = Temperature("23a")
 print(t.value)
