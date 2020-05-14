@@ -26,7 +26,7 @@ class Temperature:
     def _celsius(self):
         # _Fahrenheit = (value * 9 / 5) + 32;
         # _Kelvin = value + 273.15;
-        print("Tt's Celsius, Jim. T:", end=" ")
+        print("It's Celsius, Jim. T:", end=" ")
 
     def _fahrenheit(self):
         # _Celsius = (value - 32) * 5/9;
