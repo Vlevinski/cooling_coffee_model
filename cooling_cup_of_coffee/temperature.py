@@ -28,3 +28,7 @@ class Temperature:
         # _Celsius = value - 273.15;
         # _Fahrenheit = (_Celsius * 9 / 5) + 32;
         pass
+
+
+t = Temperature("23C")
+print (t.value)
