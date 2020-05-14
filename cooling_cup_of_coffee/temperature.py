@@ -15,10 +15,13 @@ class Temperature:
             else:
                 raise ValueError('Temperature must be C|F|K')
         except ValueError:
-            print ("Value error, Jim")
-        if self.value[-1] is "C": self._celsius()
-        elif self.value[-1] is "F": self._fahrenheit()
-        elif self.value[-1] is "K": self._kelvin()
+            print("Value error, Jim")
+        if self.value[-1] is "C":
+            self._celsius()
+        elif self.value[-1] is "F":
+            self._fahrenheit()
+        elif self.value[-1] is "K":
+            self._kelvin()
 
     def _celsius(self):
         # _Fahrenheit = (value * 9 / 5) + 32;
@@ -37,4 +40,4 @@ class Temperature:
 
 
 t = Temperature("23C")
-print (t.value)
+print(t.value)
